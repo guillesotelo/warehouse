@@ -1,38 +1,222 @@
-.App {
-  text-align: center;
+@import url('http://fonts.cdnfonts.com/css/pokemon-solid');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
+
+@media (max-width: 600px) {
+  /* styles for desktop */
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.welcome {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 200px;
+}
+
+.welcome-logo {
+  animation: fadein 2s;
+  transition: 0.5s;
+  width: 50%;
+}
+
+.poke-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 40px;
 }
 
-.App-link {
-  color: #61dafb;
+.poke-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2vw;
+  box-shadow: 2px 2px 12px rgb(222, 222, 222);
+  background-color: rgb(249, 249, 249);
+  padding: 10px;
+  margin: 10px;
+  width: 20vw;
+  height: fit-content;
+  transition: 0.3s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.poke-name {
+  font-family: 'Pokemon Solid', sans-serif;
+  font-size: 1.5vw;
+  color: #F5C405;
+  text-shadow: 1px 1px 2px rgb(96, 96, 96);
+}
+
+.poke-spec {
+  font-weight: bold;
+}
+
+.poke-card:hover {
+  transform: scale(1.01);
+  box-shadow: 2px 2px 22px rgb(222, 222, 222);
+  background-color: rgb(251, 251, 251);
+}
+
+.poke-img {
+  height: 10vw;
+  margin-right: 2vwx;
+}
+
+.poke-info {
+  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
+  line-height: 0.3;
+}
+
+
+
+
+.single-poke {
+  display: flex;
+  flex-direction: row;
+  margin: 30px;
+  border-radius: 2vw;
+  box-shadow: 2px 2px 12px rgb(222, 222, 222);
+  background-color: rgb(249, 249, 249);
+  padding: 40px;
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 60px;
+  height: fit-content;
+}
+
+.s-poke-img {
+  height: 30vw;
+}
+
+.s-poke-name {
+  font-family: 'Pokemon Solid', sans-serif;
+  font-size: 3vw;
+  color: #F5C405;
+  text-shadow: 1px 1px 2px rgb(96, 96, 96);
+  margin-bottom: 2vw;
+}
+
+.s-poke-spec {
+  font-weight: bold;
+  font-size: 1.5vw;
+  font-style: normal;
+  color:rgb(45, 45, 45)
+}
+
+.s-poke-info {
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1;
+  font-size: 1.5vw;
+  font-style: italic;
+  color:rgb(68, 68, 68);
+}
+
+.ev-btn {
+  background-color: rgb(241, 241, 241);
+  border: none;
+  margin-top: 1vw;
+  height: 50px;
+  font-size: 1.6vw !important;
+  font-size: 100%;
+  box-shadow: 1px 1px 5px grey;
+  border-radius: 1vw;
+  color: rgb(78, 78, 78);
+  transition: 0.3s;
+}
+
+.ev-btn:hover {
+  background-color: rgb(233, 230, 210);
+}
+
+.modal-btn {
+  position: absolute;
+  right: 0;
+  margin-right: 16px;
+}
+
+.evolutions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-poke-img {
+  height: 23vw;
+}
+
+
+
+
+
+.header {
+  height: 50px;
+  margin: 20px;
+  padding-bottom: 2.5vw;
+  padding-top: 2vw;
+  /* position: fixed; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* gap: 1%; */
+  background-color: rgb(255, 255, 255);
+}
+
+.logo-header {
+  width: 50%;
+}
+
+.logo-header:hover {
+  transform: scale(1.02);
+}
+
+.search-div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.search {
+  outline: none;
+  border: none;
+  height: 37px;
+  width: 30vw;
+  border-radius: 1vw;
+  font-size: 1.5vw;
+  box-shadow: 1px 1px 5px grey;
+  padding-left: 10px;
+}
+
+.search::placeholder{
+  color:rgb(164, 164, 164)
+}
+
+.search-btn {
+  background-color: rgb(241, 241, 241);
+  border: none;
+  margin-left: 1vw;
+  height: 37px;
+  font-size: 100%;
+  box-shadow: 1px 1px 5px grey;
+  border-radius: 1vw;
+  color: rgb(78, 78, 78);
+  transition: 0.3s;
+}
+
+.search-btn:hover {
+  background-color: rgb(233, 230, 210);
+}
+
+.loading {
+  font-size: 1vw;
+  color:rgb(212, 212, 212);
+  align-self: center;
+  margin-left: 45%;
+  margin-top: 20%;
 }
