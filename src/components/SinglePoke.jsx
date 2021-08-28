@@ -113,7 +113,7 @@ export default function PokeCard() {
             </Button>
           </ModalHeader>
           <ModalBody>
-            <Evolutions name={name} />
+            <Evolutions name={name} setModal={setModal}/>
           </ModalBody>
           <ModalFooter></ModalFooter>
         </Modal>

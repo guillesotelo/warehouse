@@ -146,6 +146,24 @@
   justify-content: center;
 }
 
+.ev-btns {
+  border: none;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.s-poke-ev {
+  font-weight: bold;
+  font-size: 1.5vw;
+  font-style: normal;
+  color:rgb(151, 131, 0)
+}
+
+.s-poke-ev:hover {
+  color:rgb(198, 172, 0)
+}
+
 .modal-poke-img {
   height: 23vw;
 }

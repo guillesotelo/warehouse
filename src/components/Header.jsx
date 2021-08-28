@@ -11,12 +11,12 @@ export default function Header() {
     const handleKey = (e) => {
         if(e.keyCode !== 13) return
         history.push(`/pokemon/${name.target.value.toLowerCase()}`)
-        console.log(name)
+        // console.log(name)
     }
 
     const handleSearch = () => {
         history.push(`/pokemon/${name.target.value.toLowerCase()}`)
-        console.log(name)
+        // console.log(name)
     }
 
     return (
