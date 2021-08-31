@@ -13,8 +13,8 @@ import Evolutions from "./Evolutions";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { capitalize } from '../helpers/frontHelpers'
 
-export default function PokeCard() {
-  const { name } = useParams();
+export default function SinglePoke({ poke }) {
+  const { name } = poke ? poke : useParams();
   const [pokemon, setPokemon] = useState({});
   const [modal, setModal] = useState(false);
 
@@ -22,7 +22,6 @@ export default function PokeCard() {
     try {
       const data = await axios.get(`https://pokeapi.co/api/v2/pokemon/${name}`);
       setPokemon(data.data);
-    //   console.log("pokemon: ", pokemon);
     } catch (err) {
       console.log(err);
     }

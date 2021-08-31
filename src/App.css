@@ -3,10 +3,10 @@
 
 @media (max-width: 600px) {
   /* styles for desktop */
-
 }
 
 
+/* -----------WELCOME----------- */
 .welcome {
   display: flex;
   flex-direction: column;
@@ -20,6 +20,10 @@
   width: 50%;
 }
 
+
+
+
+/* -----------HOME----------- */
 .poke-list {
   display: flex;
   flex-wrap: wrap;
@@ -28,19 +32,47 @@
   margin-top: 40px;
 }
 
+
+
+
+/* -----------PAGINATION----------- */
+.page-item {
+  font-size: 1.5vw;
+  width: 2.5vw;
+  text-align: center;
+}
+
+.page-link {
+  color:rgb(151, 131, 0)
+}
+
+.div-pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.pagination {
+  margin-top: 1vw;
+}
+
+
+
+
+/* -----------POKE CARD----------- */
 .poke-card {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   border-radius: 2vw;
-  box-shadow: 2px 2px 12px rgb(222, 222, 222);
+  box-shadow: 3px 3px 20px rgb(209, 209, 209);
   background-color: rgb(249, 249, 249);
   padding: 10px;
   margin: 10px;
   width: 20vw;
   height: fit-content;
-  transition: 0.3s;
+  transition: 0.4s;
 }
 
 .poke-name {
@@ -55,8 +87,8 @@
 }
 
 .poke-card:hover {
-  transform: scale(1.01);
-  box-shadow: 2px 2px 22px rgb(222, 222, 222);
+  transform: scale(0.99);
+  box-shadow: 2px 2px 8px rgb(222, 222, 222);
   background-color: rgb(251, 251, 251);
 }
 
@@ -73,7 +105,7 @@
 
 
 
-
+/* -----------SINGLE POKE----------- */
 .single-poke {
   display: flex;
   flex-direction: row;
@@ -82,14 +114,15 @@
   box-shadow: 2px 2px 12px rgb(222, 222, 222);
   background-color: rgb(249, 249, 249);
   padding: 40px;
-  width: 70%;
-  margin-left: 15%;
+  width: 60%;
+  margin-left: 18%;
   margin-top: 60px;
   height: fit-content;
 }
 
 .s-poke-img {
-  height: 30vw;
+  height: 20vw;
+  align-self: center;
 }
 
 .s-poke-name {
@@ -120,9 +153,10 @@
   background-color: rgb(241, 241, 241);
   border: none;
   margin-top: 1vw;
-  height: 50px;
+  padding: 0.8vw;
+  height: 4vw;
+  text-align: center;
   font-size: 1.6vw !important;
-  font-size: 100%;
   box-shadow: 1px 1px 5px grey;
   border-radius: 1vw;
   color: rgb(78, 78, 78);
@@ -130,9 +164,12 @@
 }
 
 .ev-btn:hover {
-  background-color: rgb(233, 230, 210);
+  background-color: rgb(255, 246, 212);
 }
 
+
+
+/* -----------POKE MODAL----------- */
 .modal-btn {
   position: absolute;
   right: 0;
@@ -144,6 +181,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  padding: 1vw;
 }
 
 .ev-btns {
@@ -157,11 +195,13 @@
   font-weight: bold;
   font-size: 1.5vw;
   font-style: normal;
-  color:rgb(151, 131, 0)
+  color:rgb(217, 182, 26);
+  transition: 0.3s;
+  margin-top: 1vw;
 }
 
 .s-poke-ev:hover {
-  color:rgb(198, 172, 0)
+  color:rgb(244, 219, 53)
 }
 
 .modal-poke-img {
@@ -171,7 +211,7 @@
 
 
 
-
+/* -----------HEADER----------- */
 .header {
   height: 50px;
   margin: 20px;
@@ -188,6 +228,7 @@
 
 .logo-header {
   width: 50%;
+  transition: 0.3s;
 }
 
 .logo-header:hover {
@@ -195,9 +236,10 @@
 }
 
 .search-div {
-  width: 100%;
+  /* width: 100%; */
   display: flex;
   flex-direction: row;
+  /* justify-content: center; */
 }
 
 .search {
@@ -206,13 +248,13 @@
   height: 37px;
   width: 30vw;
   border-radius: 1vw;
-  font-size: 1.5vw;
+  font-size: 1.2vw;
   box-shadow: 1px 1px 5px grey;
   padding-left: 10px;
 }
 
 .search::placeholder{
-  color:rgb(164, 164, 164)
+  color:rgb(193, 193, 193)
 }
 
 .search-btn {
@@ -231,6 +273,10 @@
   background-color: rgb(233, 230, 210);
 }
 
+.header-gap {
+  width: 33%;
+}
+
 .loading {
   font-size: 1vw;
   color:rgb(212, 212, 212);
@@ -238,3 +284,4 @@
   margin-left: 45%;
   margin-top: 20%;
 }
+

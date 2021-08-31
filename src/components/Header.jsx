@@ -4,19 +4,18 @@ import { Link, useHistory } from 'react-router-dom';
 export default function Header() {
 
     const history = useHistory()
-    // const dispatch = useDispatch()
-    const psrch = history.location.pathname === '/' ? true : false
+    const psrch = history ? history.location.pathname === '/' ? true : false : true
     const [name, setName] = useState()
 
     const handleKey = (e) => {
         if(e.keyCode !== 13) return
+        history &&
         history.push(`/pokemon/${name.target.value.toLowerCase()}`)
-        // console.log(name)
     }
 
     const handleSearch = () => {
+        history &&
         history.push(`/pokemon/${name.target.value.toLowerCase()}`)
-        // console.log(name)
     }
 
     return (
@@ -30,15 +29,15 @@ export default function Header() {
                             type="text"
                             id="search"
                             className="search"
-                            placeholder="Search for a pokemon..."
+                            placeholder="Search for a pokémon..."
                             onKeyUp={handleKey}
                             onChange={pk => setName(pk)}
                         />
                         <button className='search-btn' onClick={handleSearch}>Search</button>
                     </div>
                 }
-            <div>
-                &nbsp;
+            <div className='header-gap'>
+                <h1></h1>
             </div>
         </div>
     )
